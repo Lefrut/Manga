@@ -16,6 +16,13 @@
     <style name="Theme.Manga.V21" parent="Theme.Manga.Light">
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:navigationBarColor">@android:color/transparent</item>
+
+        <item name="textAppearanceHeadline1">@style/Manga.TextAppearance.H1</item>
+        <item name="textAppearanceHeadline2">@style/Manga.TextAppearance.H2</item>
+        <item name="textAppearanceHeadline3">@style/Manga.TextAppearance.H3</item>
+        <item name="textAppearanceHeadline4">@style/Manga.TextAppearance.H4</item>
+        <item name="textAppearanceHeadline5">@style/Manga.TextAppearance.H5</item>
+        <item name="textAppearanceHeadline6">@style/Manga.TextAppearance.H6</item>
     </style>
 
     <style name="Theme.Manga" parent="Theme.Manga.V21"/>

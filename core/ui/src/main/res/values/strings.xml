@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Manga</string>
+    <string name="welcome">Welcome</string>
+    <string name="sign_in_to_start">Sign in to start</string>
 </resources>

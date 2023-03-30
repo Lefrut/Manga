@@ -22,7 +22,7 @@ class SignInFragment : Fragment(R.layout.fragment_sign_in) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentSignInBinding.bind(view)
-        binding.haveAccount.setText()
+        //binding.haveAccount.setText()
     }
 
     @ColorInt

@@ -16,3 +16,4 @@ rootProject.name = "Manga"
 include ':app'
 include ':core:ui'
 include ':features:signin'
+include ':core:navigation'

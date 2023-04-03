@@ -6,4 +6,6 @@
     <string name="continue_with_google">Continue with Google</string>
     <string name="have_account">Have account?</string>
     <string name="sign_in">Sign in!</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
 </resources>

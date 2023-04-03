@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".SignInFragment"
     android:orientation="vertical"
     android:gravity="center_horizontal">
@@ -37,5 +38,42 @@
         android:text=""
         android:textColor="?attr/colorOnSecondary"
         tools:ignore="TextContrastCheck" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="364dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/rectangle_up_rounded"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginTop="59dp"
+            style="@style/Widget.Manga.InputLayout.Login">
+
+            <EditText
+                style="@style/Widget.Manga.EditText.Login"
+                android:autofillHints="username"
+                android:hint="@string/login"
+                tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginTop="40dp"
+            style="@style/Widget.Manga.InputLayout.Login">
+
+            <EditText
+                style="@style/Widget.Manga.EditText.Password"
+                android:autofillHints="password"
+                android:hint="@string/password"
+                tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
 
 </LinearLayout>

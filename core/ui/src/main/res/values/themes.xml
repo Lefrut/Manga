@@ -13,7 +13,10 @@
     </style>
 
 
-    <style name="Theme.Manga.V21" parent="Theme.Manga.Light">
+    <style name="Theme.Manga.Connect" parent="Theme.Manga.Light">
+    </style>
+
+    <style name="Theme.Manga.V21" parent="Theme.Manga.Connect">
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:navigationBarColor">@android:color/transparent</item>
 
@@ -24,6 +27,7 @@
         <item name="textAppearanceHeadline5">@style/Manga.TextAppearance.H5</item>
         <item name="textAppearanceHeadline6">@style/Manga.TextAppearance.H6</item>
     </style>
+
 
     <style name="Theme.Manga" parent="Theme.Manga.V21"/>
 

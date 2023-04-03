@@ -51,6 +51,12 @@
         <item name="android:textColor">?attr/colorOnPrimary</item>
         <item name="android:textAppearance">?attr/textAppearanceHeadline5</item>
     </style>
+
+    <style name="Widget.Manga.Button.Meta" parent="Widget.Manga.Button.NoShadow">
+        <item name="backgroundTint">?attr/MetaColor</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+        <item name="android:textAppearance">?attr/textAppearanceHeadline5</item>
+    </style>
     
     <style name="ShapeAppearanceOverlay.Manga.Default" parent="ShapeAppearance.Material3.Corner.Small">
         <item name="cornerSize">25dp</item>

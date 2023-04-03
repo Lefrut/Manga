@@ -28,6 +28,25 @@
         android:textColor="?attr/colorOnSecondary"
         tools:ignore="TextContrastCheck"/>
 
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="60dp"/>
+
+    <include
+        android:id="@+id/google_button"
+        layout="@layout/icon_button"
+        tools:ignore="IncludeLayoutParam" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="40dp"/>
+
+    <include
+        android:id="@+id/meta_button"
+        layout="@layout/icon_button"
+        tools:ignore="IncludeLayoutParam" />
+
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/haveAccount"
         android:textAppearance="?attr/textAppearanceHeadline5"

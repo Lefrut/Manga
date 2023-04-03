@@ -86,6 +86,12 @@
             android:textColor="?attr/colorOnPrimary"
             />
 
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Manga.Button.Login"
+            android:layout_marginTop="60dp"
+            android:text="@string/_continue_"
+            tools:ignore="TouchTargetSizeCheck" />
+
     </LinearLayout>
 
 </LinearLayout>

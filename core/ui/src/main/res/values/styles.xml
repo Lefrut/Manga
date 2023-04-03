@@ -30,4 +30,29 @@
         <item name="android:inputType">textPassword</item>
     </style>
 
+
+    <style name="Widget.Manga.Button.Base" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">280dp</item>
+        <item name="android:layout_height">43dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="shapeAppearance">@style/ShapeAppearanceOverlay.Manga.Default</item>
+    </style>
+
+    <style name="Widget.Manga.Button.NoShadow" parent="Widget.Manga.Button.Base">
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+    <style name="Widget.Manga.Button.Login" parent="Widget.Manga.Button.NoShadow">
+        <item name="backgroundTint">?attr/colorOnSecondary</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+        <item name="android:textAppearance">?attr/textAppearanceHeadline5</item>
+    </style>
+    
+    <style name="ShapeAppearanceOverlay.Manga.Default" parent="ShapeAppearance.Material3.Corner.Small">
+        <item name="cornerSize">25dp</item>
+    </style>
+
 </resources>

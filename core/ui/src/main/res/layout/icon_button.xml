@@ -11,7 +11,7 @@
             android:id="@+id/company_button"
             style="@style/Widget.Manga.Button.Meta"
             android:text="@string/continue_with_meta"
-            tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+            tools:ignore="TouchTargetSizeCheck,TextContrastCheck"/>
 
         <ImageView
             android:id="@+id/company_icon"

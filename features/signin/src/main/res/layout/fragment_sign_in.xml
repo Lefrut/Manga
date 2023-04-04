@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".SignInFragment"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="?attr/colorOnPrimary">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:layout_marginTop="100dp"
+        style="?attr/textAppearanceHeadline1"
+        android:text="@string/welcome"
+        android:textColor="?attr/colorOnPrimarySurface"
+        android:gravity="center"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        style="?attr/textAppearanceHeadline5"
+        android:layout_width="218dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="@string/sign_in_to_start"
+        android:textColor="?attr/colorOnSecondary"
+        tools:ignore="TextContrastCheck"/>
+
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="60dp"/>
+
+    <include
+        android:id="@+id/google_button"
+        layout="@layout/icon_button"
+        tools:ignore="IncludeLayoutParam" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="40dp"/>
+
+    <include
+        android:id="@+id/meta_button"
+        layout="@layout/icon_button"
+        tools:ignore="IncludeLayoutParam" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/haveAccount"
+        android:textAppearance="?attr/textAppearanceHeadline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text=""
+        android:textColor="?attr/colorOnSecondary"
+        tools:ignore="TextContrastCheck" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="364dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/rectangle_up_rounded"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginTop="59dp"
+            style="@style/Widget.Manga.InputLayout.Login">
+
+            <EditText
+                style="@style/Widget.Manga.EditText.Login"
+                android:autofillHints="username"
+                android:hint="@string/login"
+                tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginTop="40dp"
+            style="@style/Widget.Manga.InputLayout.Login">
+
+            <EditText
+                style="@style/Widget.Manga.EditText.Password"
+                android:autofillHints="password"
+                android:hint="@string/password"
+                tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="221dp"
+            android:lines="1"
+            android:text="@string/forgot_password"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            android:textColor="?attr/colorOnPrimary"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Manga.Button.Login"
+            android:layout_marginTop="60dp"
+            android:text="@string/_continue_"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -3,6 +3,7 @@
 
     <declare-styleable name="Theme">
         <attr name="secondaryBackground" format="reference"/>
+        <attr name="MetaColor" format="color"/>
     </declare-styleable>
 
 </resources>

@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Manga</string>
+    <string name="welcome">Welcome</string>
+    <string name="sign_in_to_start">Sign in to start</string>
+    <string name="continue_with_google">Continue with Google</string>
+    <string name="have_account">Have account?</string>
+    <string name="sign_in">Sign in!</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">forgot password?</string>
+    <string name="_continue_">Continue</string>
+    <string name="have_account_sign_up">Haven`t account? Sign up!</string>
+    <string name="continue_with_meta">Continue with Meta</string>
 </resources>

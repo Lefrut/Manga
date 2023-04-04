@@ -3,15 +3,17 @@
     <style name="Theme.Manga.Dark" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/primary_main_light</item>
-        <item name="colorOnPrimary">@color/primary_black_light</item>
-        <item name="colorOnPrimarySurface">@color/primary_white_light</item>
+        <item name="colorOnPrimary">@color/primary_white_light</item>
+        <item name="colorOnPrimarySurface">@color/primary_black_light</item>
         <!-- Secondary brand color. -->
         <item name="secondaryBackground">@drawable/secondary_gradient</item>
         <item name="colorSecondary">@color/secondary_gradient_part1_light</item>
         <item name="colorSecondaryVariant">@color/secondary_gradient_part2_light</item>
         <item name="colorOnSecondary">@color/secondary_gray_light</item>
+        <item name="MetaColor">@color/meta_color_light</item>
     </style>
 
-    <style name="Theme.Manga.V21" parent="Theme.Manga.Dark"/>
+    <style name="Theme.Manga.Connect" parent="Theme.Manga.Dark">
+    </style>
 
 </resources>

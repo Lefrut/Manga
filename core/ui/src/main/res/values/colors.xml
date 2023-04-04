@@ -16,4 +16,6 @@
     <color name="secondary_gradient_part2_light">#A2B2FC</color>
     <color name="secondary_gray_light">#9D9D9D</color>
 
+    <color name="meta_color_light">#2079FF</color>
+
 </resources>

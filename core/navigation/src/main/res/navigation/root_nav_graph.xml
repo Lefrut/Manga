@@ -20,5 +20,10 @@
 
 
     <include app:graph="@navigation/sign_in" />
+    <include app:graph="@navigation/sign_up" />
+    <action
+        android:id="@+id/action_global_sign_up"
+        app:destination="@id/sign_up"
+        app:launchSingleTop="true" />
 
 </navigation>

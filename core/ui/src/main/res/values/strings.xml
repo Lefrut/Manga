@@ -12,4 +12,8 @@
     <string name="_continue_">Continue</string>
     <string name="have_account_sign_up">Haven`t account? Sign up!</string>
     <string name="continue_with_meta">Continue with Meta</string>
+    <string name="sign_up_to_start">Sign up to start</string>
+    <string name="complete_password">Complete Password</string>
+    <string name="have_account_sign_in">Have account? Sign In!</string>
+    <string name="sign_up">Sign up!</string>
 </resources>

@@ -110,6 +110,7 @@
             tools:ignore="TextContrastCheck" />
 
         <com.google.android.material.button.MaterialButton
+            android:background="@null"
             android:id="@+id/button_continue"
             style="@style/Widget.Manga.Button.Login"
             android:layout_marginTop="40dp"

@@ -107,6 +107,7 @@
             />
 
         <com.google.android.material.button.MaterialButton
+            android:background="@null"
             style="@style/Widget.Manga.Button.Login"
             android:layout_marginTop="60dp"
             android:text="@string/_continue_"

@@ -1,4 +1,30 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+
+    ext.config = [
+            "application_id": "com.dashkevich.manga",
+            "compile_sdk": 33,
+            "min_sdk": 21,
+            "version_code": 1,
+            "version_name": "1.0",
+            "test_instrumentation_runner": "androidx.test.runner.AndroidJUnitRunner",
+            "minifyEnabled": false,
+            "get_default_proguard_file": "proguard-android-optimize.txt",
+            "proguard_rules" : "proguard-rules.pro",
+            "jvm_target" : "1.8",
+            "view_binding": true
+    ]
+
+    ext.versions = [
+            "navigation_component": "2.5.3"
+    ]
+    ext.impl = [
+            "navigaion_fragment": "androidx.navigation:navigation-fragment-ktx:${versions.navigation_component}",
+            "navigaion_ui": "androidx.navigation:navigation-fragment-ktx:${versions.navigation_component}"
+    ]
+
+}
+
 plugins {
     id 'com.android.application' version '7.3.1' apply false
     id 'com.android.library' version '7.3.1' apply false

@@ -2,7 +2,16 @@
 buildscript {
 
     ext.config = [
-
+            "application_id": "com.dashkevich.manga",
+            "compile_sdk": 33,
+            "min_sdk": 21,
+            "version_code": 1,
+            "version_name": "1.0",
+            "test_instrumentation_runner": "androidx.test.runner.AndroidJUnitRunner",
+            "minifyEnabled": false,
+            "get_default_proguard_file": "proguard-android-optimize.txt",
+            "proguard_rules" : "proguard-rules.pro",
+            "jvm_target" : "1.8",
     ]
 
     ext.versions = [
@@ -10,10 +19,10 @@ buildscript {
             "application": "7.3.1",
             "library": "7.3.1",
             "navigation_component": "7.3.1",
-
     ]
     ext.impl = [
-            "navigaion_fragment": "androidx.navigation:navigation-fragment-ktx:${versions.navigation_component}"
+            "navigaion_fragment": "androidx.navigation:navigation-fragment-ktx:${versions.navigation_component}",
+            "navigaion_ui": "androidx.navigation:navigation-fragment-ktx:${versions.navigation_component}"
     ]
     ext.plugs = [
             "application": "com.android.application",

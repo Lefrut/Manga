@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".SignInFragment"
+    tools:context=".SignUpFragment"
     android:orientation="vertical"
     android:gravity="center_horizontal"
     android:background="?attr/colorOnPrimary">
@@ -25,14 +25,14 @@
         android:layout_height="18dp"
         android:layout_marginTop="5dp"
         android:gravity="center"
-        android:text="@string/sign_in_to_start"
+        android:text="@string/sign_up_to_start"
         android:textColor="?attr/colorOnSecondary"
         tools:ignore="TextContrastCheck"/>
 
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="60dp"/>
+        android:layout_height="41dp"/>
 
     <include
         android:id="@+id/google_button"
@@ -48,22 +48,10 @@
         layout="@layout/icon_button"
         tools:ignore="IncludeLayoutParam" />
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/haveAccount"
-        android:textAppearance="?attr/textAppearanceHeadline5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:text=""
-        android:textColor="?attr/colorOnSecondary"
-        tools:ignore="TextContrastCheck" />
-
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="364dp"
-        android:layout_marginTop="60dp"
+        android:layout_height="441dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/rectangle_up_rounded"
         android:orientation="vertical"
         android:gravity="center_horizontal">
@@ -96,23 +84,36 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginTop="40dp"
+            style="@style/Widget.Manga.InputLayout.Login">
+
+            <EditText
+                android:id="@+id/copy_password"
+                style="@style/Widget.Manga.EditText.Password"
+                android:autofillHints="password"
+                android:hint="@string/complete_password"
+                tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/haveAccount"
+            android:textAppearance="?attr/textAppearanceHeadline5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="221dp"
-            android:lines="1"
-            android:text="@string/forgot_password"
-            android:textAppearance="?attr/textAppearanceHeadline6"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:text="@string/have_account_sign_in"
             android:textColor="?attr/colorOnPrimary"
-            />
+            tools:ignore="TextContrastCheck" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/buttonContinue"
             android:background="@null"
+            android:id="@+id/button_continue"
             style="@style/Widget.Manga.Button.Login"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="40dp"
             android:text="@string/_continue_"
             tools:ignore="TouchTargetSizeCheck" />
 

@@ -1,70 +1,73 @@
-package com.dashkevich.signin
+package com.dashkevich.signup
 
-import android.annotation.SuppressLint
 import android.content.res.ColorStateList
 import android.os.Bundle
-import android.text.SpannableStringBuilder
 import android.util.Log
-import android.view.View
-import android.widget.TextView
-import androidx.annotation.ColorInt
-import androidx.core.text.color
-import androidx.core.widget.doOnTextChanged
 import androidx.fragment.app.Fragment
+import android.view.View
+import androidx.annotation.ColorInt
+import androidx.core.widget.doOnTextChanged
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
-import com.dashkevich.signin.databinding.FragmentSignInBinding
-import com.dashkevich.signin.model.ButtonPress
-import com.dashkevich.signin.model.SignInIntent
+import com.dashkevich.signup.databinding.FragmentSignUpBinding
+import com.dashkevich.signup.model.ButtonPress
+import com.dashkevich.signup.model.SignUpIntent
 import com.dashkevich.ui.getColorFromAttr
 import com.dashkevich.ui.setRegisterButtons
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
+class SignUpFragment : Fragment(R.layout.fragment_sign_up) {
 
-class SignInFragment : Fragment(R.layout.fragment_sign_in) {
-
-    lateinit var binding: FragmentSignInBinding
-    private val signInViewModel: SignInViewModel by viewModels()
+    private lateinit var binding: FragmentSignUpBinding
+    private val signUpViewModel: SignUpViewModel by viewModels()
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding = FragmentSignInBinding.bind(view)
-        binding.haveAccount.setHaveAccountText()
+        binding = FragmentSignUpBinding.bind(view)
         setRegisterButtons(view)
-
-
         val buttonContinue = binding.buttonContinue
         val haveAccount = binding.haveAccount
         val login = binding.login
         val password = binding.password
+        val copyPassword = binding.copyPassword
 
         haveAccount.setOnClickListener {
-            findNavController().navigate(com.dashkevich.navigation.R.id.action_global_sign_up)
+            findNavController().popBackStack()
         }
         login.doOnTextChanged { text, _, _, _ ->
-            signInViewModel
-                .processingEvent(SignInIntent.ChangingLogin(text.toString()))
+            signUpViewModel
+                .processingEvent(SignUpIntent.ChangingLogin(text.toString()))
         }
 
         password.doOnTextChanged { text, _, _, _ ->
-            signInViewModel
-                .processingEvent(SignInIntent.ChangingPassword(text.toString()))
+            signUpViewModel
+                .processingEvent(SignUpIntent.ChangingPassword(text.toString()))
 
+        }
+
+        copyPassword.doOnTextChanged { text, _, _, _ ->
+            signUpViewModel
+                .processingEvent(
+                    SignUpIntent.ChangingCopyPassword(
+                        password.text.toString(),
+                        text.toString()
+                    )
+                )
         }
 
         viewLifecycleOwner.lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.RESUMED) {
-                signInViewModel.viewState.collect { state ->
+                signUpViewModel.viewState.collect { state ->
 
                     when (state.buttonPress) {
                         ButtonPress.Press -> {
-                            findNavController().navigate(com.dashkevich.navigation.R.id.action_global_sign_up)
+                            Log.d("Debug", "Button press")
                         }
                         else -> {}
                     }
@@ -73,13 +76,14 @@ class SignInFragment : Fragment(R.layout.fragment_sign_in) {
                         @ColorInt val buttonColor: Int
                         if (state.correctnessOfFields.first
                             && state.correctnessOfFields.second
+                            && state.correctnessOfFields.third
                         ) {
                             buttonColor =
                                 requireContext().getColorFromAttr(com.google.android.material.R.attr.colorOnPrimarySurface)
                             buttonContinue.backgroundTintList =
                                 ColorStateList.valueOf(buttonColor)
-                            signInViewModel.processingEvent(
-                                SignInIntent.ChangingReadinessButton(
+                            signUpViewModel.processingEvent(
+                                SignUpIntent.ChangingReadinessButton(
                                     true
                                 )
                             )
@@ -88,8 +92,8 @@ class SignInFragment : Fragment(R.layout.fragment_sign_in) {
                                 requireContext().getColorFromAttr(com.google.android.material.R.attr.colorOnSecondary)
                             buttonContinue.backgroundTintList =
                                 ColorStateList.valueOf(buttonColor)
-                            signInViewModel.processingEvent(
-                                SignInIntent.ChangingReadinessButton(
+                            signUpViewModel.processingEvent(
+                                SignUpIntent.ChangingReadinessButton(
                                     false
                                 )
                             )
@@ -100,27 +104,15 @@ class SignInFragment : Fragment(R.layout.fragment_sign_in) {
         }
 
         buttonContinue.setOnClickListener {
-            if (signInViewModel.viewState.value.buttonReadiness) {
-                signInViewModel.processingEvent(SignInIntent.ContinueButtonClick)
-            }
+            if (signUpViewModel.viewState.value.buttonReadiness)
+            signUpViewModel.processingEvent(SignUpIntent.ContinueButtonClick)
         }
 
 
     }
 
-    private fun TextView.setHaveAccountText() {
-        val haveAccountColor =
-            requireActivity().getColorFromAttr(com.google.android.material.R.attr.colorSecondaryVariant)
-        val haveAccountText = SpannableStringBuilder()
-            .append(context.getString(com.dashkevich.ui.R.string.have_account))
-            .append(" ")
-            .color(haveAccountColor) { append(context.getString(com.dashkevich.ui.R.string.sign_up)) }
-        text = haveAccountText
-    }
-
     override fun onDestroyView() {
         super.onDestroyView()
-        signInViewModel.processingEvent(SignInIntent.LeaveScreen)
+        signUpViewModel.processingEvent(SignUpIntent.LeaveScreen)
     }
-
 }

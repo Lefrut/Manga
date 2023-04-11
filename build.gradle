@@ -1,4 +1,29 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+
+    ext.config = [
+
+    ]
+
+    ext.versions = [
+            "kotlin": "1.7.20",
+            "application": "7.3.1",
+            "library": "7.3.1",
+            "navigation_component": "7.3.1",
+
+    ]
+    ext.impl = [
+            "navigaion_fragment": "androidx.navigation:navigation-fragment-ktx:${versions.navigation_component}"
+    ]
+    ext.plugs = [
+            "application": "com.android.application",
+            "library": "com.android.library",
+            "kotlin_android" : "org.jetbrains.kotlin.android"
+
+    ]
+
+}
+
 plugins {
     id 'com.android.application' version '7.3.1' apply false
     id 'com.android.library' version '7.3.1' apply false

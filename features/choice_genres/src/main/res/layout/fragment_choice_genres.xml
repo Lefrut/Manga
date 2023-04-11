@@ -1,9 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
     tools:context=".ChoiceGenresFragment">
 
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/let_us_know"
+        android:textAppearance="?attr/textAppearanceHeadline1"
+        android:textColor="?attr/colorOnPrimarySurface" />
 
-</FrameLayout>
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="218dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="@string/choose_your_genre_to_find_favorite_titles_here"
+        android:textAppearance="?attr/textAppearanceHeadline5"
+        android:textColor="?attr/colorOnSecondary"
+        tools:ignore="TextContrastCheck" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/continue_btn"
+        style="@style/Widget.Manga.Button.Login"
+        android:layout_marginTop="30dp"
+        android:text="@string/_continue_"
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/skip"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="@string/skip_for_now"
+        android:textAppearance="?attr/textAppearanceHeadline5"
+        android:textColor="?attr/colorOnSecondary"
+        tools:ignore="TextContrastCheck" />
+
+
+</LinearLayout>

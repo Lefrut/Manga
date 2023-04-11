@@ -5,20 +5,19 @@ plugins {
 
 android {
     namespace 'com.dashkevich.signup'
-    compileSdk 33
+    compileSdk config.compile_sdk
 
     defaultConfig {
-        minSdk 21
-        targetSdk 33
+        minSdk config.min_sdk
+        targetSdk config.compile_sdk
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles "consumer-rules.pro"
+        testInstrumentationRunner config.test_instrumentation_runner
     }
 
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile(config.get_default_proguard_file), config.proguard_rules
         }
     }
     compileOptions {
@@ -26,11 +25,11 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = config.jvm_target
     }
 
-    buildFeatures{
-        viewBinding = true
+    buildFeatures {
+        viewBinding = config.view_binding
     }
 }
 
@@ -38,8 +37,8 @@ dependencies {
     implementation project(':core:ui')
     implementation project(':core:navigation')
 
-    implementation("androidx.navigation:navigation-fragment-ktx:2.5.3")
-    implementation("androidx.navigation:navigation-ui-ktx:2.5.3")
+    implementation(impl.navigaion_fragment)
+    implementation(impl.navigaion_ui)
 
     implementation 'androidx.core:core-ktx:1.9.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'

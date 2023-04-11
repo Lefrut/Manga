@@ -12,23 +12,15 @@ buildscript {
             "get_default_proguard_file": "proguard-android-optimize.txt",
             "proguard_rules" : "proguard-rules.pro",
             "jvm_target" : "1.8",
+            "view_binding": true
     ]
 
     ext.versions = [
-            "kotlin": "1.7.20",
-            "application": "7.3.1",
-            "library": "7.3.1",
-            "navigation_component": "7.3.1",
+            "navigation_component": "2.5.3"
     ]
     ext.impl = [
             "navigaion_fragment": "androidx.navigation:navigation-fragment-ktx:${versions.navigation_component}",
             "navigaion_ui": "androidx.navigation:navigation-fragment-ktx:${versions.navigation_component}"
-    ]
-    ext.plugs = [
-            "application": "com.android.application",
-            "library": "com.android.library",
-            "kotlin_android" : "org.jetbrains.kotlin.android"
-
     ]
 
 }

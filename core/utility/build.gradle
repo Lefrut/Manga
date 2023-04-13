@@ -1,18 +1,15 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
 }
 
 android {
-    namespace 'com.dashkevich.manga'
+    namespace 'com.dashkevich.utility'
     compileSdk config.compile_sdk
 
     defaultConfig {
-        applicationId config.application_id
         minSdk config.min_sdk
         targetSdk config.compile_sdk
-        versionCode config.version_code
-        versionName config.version_name
 
         testInstrumentationRunner config.test_instrumentation_runner
     }
@@ -33,21 +30,10 @@ android {
 }
 
 dependencies {
-    implementation project(':core:utility')
-    implementation project(':core:ui')
-    implementation project(':core:navigation')
-    implementation project(':features:choice_genres')
-    implementation project(':features:signin')
-    implementation project(':features:signup')
-
-
-    implementation(impl.navigaion_fragment)
-    implementation(impl.navigaion_ui)
 
     implementation 'androidx.core:core-ktx:1.9.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.8.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'

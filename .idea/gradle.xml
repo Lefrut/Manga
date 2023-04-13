@@ -14,6 +14,7 @@
             <option value="$PROJECT_DIR$/core" />
             <option value="$PROJECT_DIR$/core/navigation" />
             <option value="$PROJECT_DIR$/core/ui" />
+            <option value="$PROJECT_DIR$/core/utility" />
             <option value="$PROJECT_DIR$/features" />
             <option value="$PROJECT_DIR$/features/choice_genres" />
             <option value="$PROJECT_DIR$/features/signin" />

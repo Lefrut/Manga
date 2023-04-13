@@ -5,7 +5,9 @@
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    tools:context=".ChoiceGenresFragment">
+    tools:context=".ChoiceGenresFragment"
+    android:background="?attr/colorOnPrimary"
+    >
 
     <com.google.android.material.textview.MaterialTextView
         android:layout_width="wrap_content"
@@ -24,6 +26,12 @@
         android:textAppearance="?attr/textAppearanceHeadline5"
         android:textColor="?attr/colorOnSecondary"
         tools:ignore="TextContrastCheck" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"/>
 
 
     <com.google.android.material.button.MaterialButton

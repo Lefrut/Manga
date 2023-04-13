@@ -16,13 +16,15 @@ buildscript {
     ]
 
     ext.versions = [
-            "navigation_component": "2.5.3"
+            "navigation_component": "2.5.3",
+            "adapter_delegates": "4.3.2"
     ]
     ext.impl = [
             "navigaion_fragment": "androidx.navigation:navigation-fragment-ktx:${versions.navigation_component}",
-            "navigaion_ui": "androidx.navigation:navigation-fragment-ktx:${versions.navigation_component}"
+            "navigaion_ui": "androidx.navigation:navigation-fragment-ktx:${versions.navigation_component}",
+            "adapter_delegates": "com.hannesdorfmann:adapterdelegates4-kotlin-dsl:${versions.adapter_delegates}",
+            "adapter_delegates_vb": "com.hannesdorfmann:adapterdelegates4-kotlin-dsl-viewbinding:${versions.adapter_delegates}"
     ]
-
 }
 
 plugins {

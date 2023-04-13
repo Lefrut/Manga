@@ -104,8 +104,10 @@ class SignUpFragment : Fragment(R.layout.fragment_sign_up) {
         }
 
         buttonContinue.setOnClickListener {
-            if (signUpViewModel.viewState.value.buttonReadiness)
-            signUpViewModel.processingEvent(SignUpIntent.ContinueButtonClick)
+            if (signUpViewModel.viewState.value.buttonReadiness) {
+                signUpViewModel.processingEvent(SignUpIntent.ContinueButtonClick)
+            }
+            findNavController().navigate(com.dashkevich.navigation.R.id.action_global_choice_genres)
         }
 
 

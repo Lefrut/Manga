@@ -2,4 +2,5 @@
 <resources>
     <item name="sign_in" type="id" />
     <item name="sign_up" type="id" />
+    <item name="choice_genres" type="id" />
 </resources>

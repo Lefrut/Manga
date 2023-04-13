@@ -25,5 +25,12 @@
         android:id="@+id/action_global_sign_up"
         app:destination="@id/sign_up"
         app:launchSingleTop="true" />
+    <include app:graph="@navigation/choice_genres" />
+    <action
+        android:id="@+id/action_global_choice_genres"
+        app:destination="@id/choice_genres"
+        app:popUpTo="@id/root_nav_graph"
+        app:popUpToInclusive="true"
+        app:launchSingleTop="true" />
 
 </navigation>

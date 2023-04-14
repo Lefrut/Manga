@@ -20,4 +20,15 @@
     <string name="choose_your_genre_to_find_favorite_titles_here">Choose your genre to find favorite titles here!</string>
     <string name="skip_for_now">Skip for now</string>
     <string name="action">Action</string>
+    <string name="romance">Romance</string>
+    <string name="drama">Drama</string>
+    <string name="horror">Horror</string>
+    <string name="fantasy">Fantasy</string>
+    <string name="mystical">Mystical</string>
+    <string name="magic">Magic</string>
+    <string name="comedy">Comedy</string>
+    <string name="daily_life">Daily life</string>
+    <string name="psychology">Psychology</string>
+    <string name="adventure">Adventure</string>
+    <string name="thriller">Thriller</string>
 </resources>
